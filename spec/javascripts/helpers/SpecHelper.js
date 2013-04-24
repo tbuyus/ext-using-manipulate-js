@@ -31,3 +31,7 @@ var HTML = function(html_string){
 
   return element;
 };
+
+var TextNode = function(text){
+  return document.createTextNode(text);
+};

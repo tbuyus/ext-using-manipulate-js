@@ -1,5 +1,5 @@
-var player = Components.classes["@mozilla.org/sound;1"].createInstance(Components.interfaces.nsISound);
-var ios = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService);
+// var player = Components.classes["@mozilla.org/sound;1"].createInstance(Components.interfaces.nsISound);
+// var ios = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService);
 
 var currentLowerCutoff=0;
 var currentUpperCutoff=200000;
@@ -212,15 +212,15 @@ return t;
 // IS THIS EVEN CROSS-DOMAIN USABLE, AND MAYBE BROWSER JAVASCRIPT HAS MOVED
 // ON AND THIS COULD NOW GO IN A JAVASCRIPT ASSOCIATIVE ARRAY (NOW - SPRING 2013 ).
 
-var file = Components.classes["@mozilla.org/file/directory_service;1"]
-                    .getService(Components.interfaces.nsIProperties)
-                    .get("ProfD", Components.interfaces.nsIFile);
-file.append("extensions");
-file.append("db@toby");
-file.append("spell.sqlite");
+// var file = Components.classes["@mozilla.org/file/directory_service;1"]
+//                     .getService(Components.interfaces.nsIProperties)
+//                     .get("ProfD", Components.interfaces.nsIFile);
+// file.append("extensions");
+// file.append("db@toby");
+// file.append("spell.sqlite");
 
-var storageService = Components.classes["@mozilla.org/storage/service;1"]
-                       .getService(Components.interfaces.mozIStorageService);
-var mDBConn = storageService.openDatabase(file);
-var statement = mDBConn.createStatement("SELECT * FROM dictionary where tradspell=?1");
+// var storageService = Components.classes["@mozilla.org/storage/service;1"]
+//                        .getService(Components.interfaces.mozIStorageService);
+// var mDBConn = storageService.openDatabase(file);
+// var statement = mDBConn.createStatement("SELECT * FROM dictionary where tradspell=?1");
 
